@@ -1,12 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const TodoCard = (props) => {
   
-  const {todo} = props
+  const { todo } = props
   const { id, title, completed } = todo;
+  const history = useHistory();
 
   return (
-    <div>
+    <div 
+      style={{
+        backgroundColor: "grey",
+        margin: "10px",
+        padding: "15px",
+        width: "150px"
+      }}
+      onClick={() => history.push(`/todo/${id}`)}
+    >
       <h4>{ id }: { title }</h4>
       <h6>{ `Completed?: ${completed}` }</h6>
     </div>
