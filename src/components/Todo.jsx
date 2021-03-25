@@ -19,7 +19,7 @@ const Todo = () => {
   //destructring response object from state, 
   //renaming id from response to not conflict with id from params
   const { id: todoId, userId, title, completed } = todoDetails;
-  console.log(todoDetails)
+  
   return (
     <div>
       {todoDetails ? (
